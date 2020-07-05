@@ -31,8 +31,9 @@ sudo snap install code --classic
 ```
 
 ## Usage
-## Step 1:
+### Step 1:
 - Create an AWS account (Free for 1 year)
 - Login after the account has been successfully created
 - Now go to IAM in Identity and Access Management services and setup a user with programming access.
-- After the setup, note down the Public Access Key and Secret Access Key (Highly Important)
+- After the setup, note down the **Public Access Key** and **Secret Access Key** (**Highly Important**)
+-
