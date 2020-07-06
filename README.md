@@ -10,7 +10,7 @@ sudo apt-get install python3
 sudo apt-get install python3-pip
 ```
 - [JDK 8 ](https://jdk.java.net/) - [Read this to install Java](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/JAVA.txt)
-- [Apache Zookeeper](https://zookeeper.apache.org/)
+- [Apache Zookeeper](https://zookeeper.apache.org/) - [Read this to install Zookeeper](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/ZOOKEEPER.txt)
 - [Apache Kafka](https://kafka.apache.org/downloads)
 - [Amazon AWS Account](https://aws.amazon.com/)
 - [Google Historical Data](https://in.finance.yahoo.com/quote/GOOGL?p=GOOGL&.tsrc=fin-srch), download CSV file selecting the range
@@ -78,6 +78,8 @@ toolkit and Jinja2 template engine. The Flask framework uses Werkzeug as one of 
 Werkzeug is a WSGI toolkit, which implements requests, response objects, and other utility functions. This enables building a web framework on top of it.
 Web Server Gateway Interface (WSGI ) is a specification for a universal interface between the web server and the web applications. It has been adopted as a standard for Python web application development.
 Jinja2 is a popular templating engine for Python. A web templating system combines a template with a certain data source to render dynamic web pages.*
+
+- Finally, to display the graph I used Highcharts JS in my HTML file and styled it through CSS.
 
 ## Setup to run the project
 ### Step 1:
