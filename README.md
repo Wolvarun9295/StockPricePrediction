@@ -30,6 +30,7 @@ sudo apt install snapd
 sudo snap install pycharm-community –classic
 sudo snap install code --classic
 ```
+#
 
 ## What the project does and how it was made?
 - This project has been built using Python3 to help predict the future stock close prices of Google stock with the help of Machine Learning and Data Visualization in real time.
