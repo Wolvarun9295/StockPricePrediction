@@ -47,6 +47,10 @@ sudo snap install code --classic
 ***An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services' (AWS) Simple Storage Service (S3), an object storage offering. Amazon S3 buckets, which are similar to file folders, store objects, which consist of data and its descriptive metadata.***
 
 - After creating and uploading my CSV file, I fetched the file from my S3 bucket with the help of PySpark.
+
+### ***What is PySpark?***
+***Apache Spark is written in Scala programming language. To support Python with Spark, Apache Spark community released a tool, PySpark. Using PySpark, you can work with RDDs in Python programming language also. It is because of a library called Py4j that they are able to achieve this.***
+
 - Since no data is clean and has missing values, it needs to be cleaned.
 - Now after the data has been cleaned, we can now built a model using Machine Learning. Keep in mind, the less data we use the higher chances of underfitting occur and the more data we use, the higher chances of overfitting occur. So we need to choose the data not more, not less.
 - The model building process has been done using PySpark’s mlib Library.
