@@ -38,7 +38,7 @@ sudo snap install code --classic
 - Downloaded the Amazon CLI on my system and then added the AWS access keys to be accessed globally.
 - Next I started creating python script to create a bucket and upload the downloaded CSV file onto the AWS bucket. To do this, I needed to install the boto3.
 
-### What is boto3?
+### ***What is boto3?***
 *Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.*
 
 ### What is Amazon S3 Bucket?
