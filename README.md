@@ -39,7 +39,7 @@ sudo snap install code --classic
 - Next I started creating python script to create a bucket and upload the downloaded CSV file onto the AWS bucket. To do this, I needed to install the boto3.
 
 ### ***What is boto3?***
-*Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.*
+***Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.***
 
 ### ***What is Amazon S3 Bucket?***
 *An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services' (AWS) Simple Storage Service (S3), an object storage offering. Amazon S3 buckets, which are similar to file folders, store objects, which consist of data and its descriptive metadata.*
@@ -86,7 +86,7 @@ Jinja2 is a popular templating engine for Python. A web templating system combin
 - Create an AWS account. (free for 1 year)
 - Login after the account has been successfully created.
 - Now go to **IAM** in **Identity and Access Management** services and setup a user with programming access and give full access to the user.
-- After the setup, note down the **Public Access Key** and **Secret Access Key**. (**Highly Important**)
+- After the setup, note down the **Public Access Key** and **Secret Access Key**. **(Highly Important)**
 
 ### Step 2:
 - Install the Amazon CLI (Command Line Interface) on your local machine. (requires curl)
