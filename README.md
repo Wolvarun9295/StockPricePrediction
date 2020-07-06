@@ -41,7 +41,29 @@ sudo snap install code --classic
 ### Step 2:
 - Install the Amazon CLI (Command Line Interface) on your local machine. (requires curl)
 ```
-sudo apt-get install curl # Installing curl
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" # Downloading the CLI file
-unzip awscliv2.zip # Unzipping the file
-sudo ./aws/install # Installing CLI
+sudo apt-get install curl
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws –version
+```
+- On your local machine, make a folder **.aws** in root folder and touch two files in the folder: **config** and **credentials**. (to make the aws keys globally accessible)
+- Add the following lines in config:
+```
+[default]
+region=ap-south-1 (This can be the region of your choice)
+```
+- Add the following lines in credentials:
+```
+[default]
+aws_access_key_id=your access key
+aws_secret_access_key=your secret access key
+```
+- Now run the following commands to check if the keys are configured and set respectively:
+```
+aws configure
+aws configure list
+```
+
+### Step 3:
+
