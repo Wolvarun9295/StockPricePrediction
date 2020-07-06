@@ -13,7 +13,7 @@ sudo apt-get install python3-pip
 - [Apache Zookeeper](https://zookeeper.apache.org/)
 - [Apache Kafka](https://kafka.apache.org/downloads)
 - [Amazon AWS Account](https://aws.amazon.com/)
-- [Google Historical Data](https://in.finance.yahoo.com/quote/GOOGL?p=GOOGL&.tsrc=fin-srch), dowload CSV file selecting the range
+- [Google Historical Data](https://in.finance.yahoo.com/quote/GOOGL?p=GOOGL&.tsrc=fin-srch), download CSV file selecting the range
 - Requirements.txt
 
 Use the following command to install the .txt file:
@@ -22,7 +22,7 @@ Use the following command to install the .txt file:
 sudo pip3 install -r Requirements.txt
 ```
 
-NOTE: This project has been created using Jetbrains PyCharm Community Edition and Visual Studio Code. You can install both from [Snap Store](https://snapcraft.io/)
+**NOTE:** This project has been created using Jetbrains PyCharm Community Edition and Visual Studio Code. You can install both from [Snap Store](https://snapcraft.io/)
 
 ```
 sudo apt update
@@ -30,8 +30,25 @@ sudo apt install snapd
 sudo snap install pycharm-community –classic
 sudo snap install code --classic
 ```
+## 
 
-## Usage
+## What the project does and how it was made?
+- This project has been built using Python3 to help predict the future stock close prices of Google stock with the help of Machine Learning and Data Visualization in real time.
+- To start, I created an AWS account and created a user with all access.
+- Downloaded the Amazon CLI on my system and then added the AWS access keys to be accessed globally.
+- Next I started creating python script to create a bucket and upload the downloaded CSV file onto the AWS bucket. To do this, I needed to install the boto3.
+
+### What is boto3?
+Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.
+
+### What is Amazon S3 Bucket?
+An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services' (AWS) Simple Storage Service (S3), an object storage offering. Amazon S3 buckets, which are similar to file folders, store objects, which consist of data and its descriptive metadata.
+
+- After creating and uploading my CSV file, I fetched the file from my S3 bucket with the help of PySpark.
+
+
+
+## Setup to run the project
 ### Step 1:
 - Create an AWS account. (free for 1 year)
 - Login after the account has been successfully created.
@@ -51,7 +68,7 @@ aws –version
 - Add the following lines in config:
 ```
 [default]
-region=ap-south-1 (This can be the region of your choice)
+region=region of your choice
 ```
 - Add the following lines in credentials:
 ```
@@ -65,5 +82,4 @@ aws configure
 aws configure list
 ```
 
-### Step 3:
 
