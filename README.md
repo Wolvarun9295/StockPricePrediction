@@ -140,7 +140,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 - Open the browser to see the graph displayed on 127.0.0.1:5000 shown in the below screeenshot.
 <img src=Screenshots/graph.gif height=”100”>
 
-**NOTE:** The graph needs to be kept running for at least 30 mins before it starts giving accurate predictions.
+**NOTE:** The graph needs to be kept running for at least 30 mins before it starts giving near accurate predictions.
 
 #
 
