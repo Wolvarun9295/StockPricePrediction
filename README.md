@@ -138,10 +138,12 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 #
 
 ## Error faced while running project
-- To solve the PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON error while running PySpark in PyCharm, do the following:
+To solve the PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON error while running PySpark in PyCharm, do the following:
 1. Click on the **Edit Configurations** besides the Run button.
 <img src=Screenshots/edit.png width=”100” >
+
 2. In **Environmental Variables**, click on the small page button.
 <img src=Screenshots/environmentalVars.png width=”100” >
-3. And add the following variables in it and click on **apply**.
+
+3. And add the following variables in it and click on OK  and then **Apply**.
 <img src=Screenshots/addingVars.png width=”100” >
