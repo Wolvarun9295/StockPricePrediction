@@ -137,7 +137,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 - Now run **app.py** file. This will run the **Consumer.py** file and start receiving the messages published by **Producer.py**.
 - The **app.py** is the flask application which calls the HTML template in the templates folder which uses the CSS and JS files in the static folder.
 - Open the browser to see the graph displayed on 127.0.0.1:5000 shown in the below screeenshot.
-<img src=Screenshots/graph.png height=”100”>
+<img src=Screenshots/graph.gif height=”100”>
 
 #
 
