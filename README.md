@@ -16,7 +16,7 @@ $ sudo apt-get install python3-pip
 - [Apache Kafka](https://kafka.apache.org/downloads)
 - [Amazon AWS Account](https://aws.amazon.com/)
 - [Google Historical Data](https://in.finance.yahoo.com/quote/GOOGL?p=GOOGL&.tsrc=fin-srch), download CSV file selecting the range
-- [Requirements.txt](https://github.com/Wolvarun9295/StockMarketPredictionProject/blob/master/Requirements.txt)
+- [Requirements.txt](Requirements.txt)
 
 Use the following command to install the .txt file:
 
@@ -115,11 +115,13 @@ $ aws configure list
 ```
 
 ### Step 3:
+In this step we will run all the python scripts in the following order. Note that you can make changes wherever necessary according to your settings.
 - Run the **createBucket.py** file. This will create the bucket in the AWS S3.
 - Run the **uploadFile.py** file. This will upload the CSV file in your bucket.
 - Run the **fetchFile.py** file. This will fetch the CSV file from your bucket.
 - Run the **dataCleaner.py** file. This is clean the data in CSV file.
 - Run the **modelBuilder.py** file. This will build the model based on the data and save the model. It will be saved in the project folder named **GoogleStockModel**.
+*NOTE: Running the modelBuilder.py can also run all the above files sequentially. If you want to test each code, run each one individually.*
 
 ### Step 4:
 - After building the model, on terminal start the Zookeeper and Kafka servers.
@@ -140,6 +142,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 #
 
 ## Solving error while running project
+***Two kinds of errors that we face is while running PySpark code: one is p4yj error which is solved by installing p4yj package. The other is PySpark worker is running in Python2.7 error. ***
 To solve the **PYSPARK_PYTHON** and **PYSPARK_DRIVER_PYTHON** error while running PySpark in PyCharm, do the following in files wherever required:
 - Click on the **Edit Configurations** besides the Run button.
 <img src=Screenshots/edit.png height=”100” >
@@ -149,3 +152,17 @@ To solve the **PYSPARK_PYTHON** and **PYSPARK_DRIVER_PYTHON** error while runnin
 
 - And add the following variables in it and click on **OK**  and then **Apply**.
 <img src=Screenshots/addingVars.png height=”100” >
+
+#
+
+## References
+- [Keith, The Coder – First 3 videos for AWS bucket operations](https://www.youtube.com/playlist?list=PLlQ1p0CY-uJVOXeu6laL4Dqq-Ocabuqbn)
+- [Avery Makes Games – AlphaVantage key generating and pulling live stock data](https://youtu.be/339AfkUQ67o)
+
+#
+
+## License and Copyright
+
+© Varun I. Nagrare
+
+Lincensed under the [MIT License](LICENSE)
