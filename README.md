@@ -121,7 +121,8 @@ In this step we will run all the python scripts in the following order. Note tha
 - Run the **fetchFile.py** file. This will fetch the CSV file from your bucket.
 - Run the **dataCleaner.py** file. This is clean the data in CSV file.
 - Run the **modelBuilder.py** file. This will build the model based on the data and save the model. It will be saved in the project folder named **GoogleStockModel**.
-*NOTE: Running the modelBuilder.py can also run all the above files sequentially. If you want to test each code, run each one individually.*
+
+**NOTE: Running the modelBuilder.py can also run all the above files sequentially. If you want to test each code, run each one individually.**
 
 ### Step 4:
 - After building the model, on terminal start the Zookeeper and Kafka servers.
@@ -139,7 +140,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 - Open the browser to see the graph displayed on 127.0.0.1:5000 shown in the below screeenshot.
 <img src=Screenshots/graph.gif height=”100”>
 
-*NOTE:* The graph needs to be kept running for at least 30 mins before it starts giving accurate predictions.
+**NOTE:** The graph needs to be kept running for at least 30 mins before it starts giving accurate predictions.
 
 #
 
