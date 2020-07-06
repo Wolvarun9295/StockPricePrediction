@@ -1,0 +1,16 @@
+alpha-vantage==2.2.0
+boto3==1.14.15
+botocore==1.17.15
+Flask==1.1.2
+fs==2.4.11
+fs-s3fs==1.1.1
+Jinja2==2.11.2
+kafka-python==2.0.1
+pandas==1.0.5
+py4j==0.10.7
+pyspark==2.4.5
+pyspark==2.4.6
+pyspark-stubs==2.4.0
+s3fs==0.4.2
+Werkzeug==1.0.1
+
