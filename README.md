@@ -41,7 +41,7 @@ sudo snap install code --classic
 ### ***What is boto3?***
 *Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.*
 
-### What is Amazon S3 Bucket?
+### ***What is Amazon S3 Bucket?***
 *An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services' (AWS) Simple Storage Service (S3), an object storage offering. Amazon S3 buckets, which are similar to file folders, store objects, which consist of data and its descriptive metadata.*
 
 - After creating and uploading my CSV file, I fetched the file from my S3 bucket with the help of PySpark.
@@ -51,17 +51,17 @@ sudo snap install code --classic
 - I used Linear Regression to train the model and used the Regression Evaluator to give the accuracy of my model.
 - After the successfull buliding of my model, I needed to check if it works on real data. For that I registered on a website called AlphaVantage and generated the key to access the live data from their site.
 
-### What is AlphaVantage?
+### ***What is AlphaVantage?***
 *Alpha Vantage Inc. is a company that provides realtime and historical stock APIs as well as forex
 (FX) and digital/crypto currency data feeds.*
 
 - Now comes the fun part of testing the model using Data Visualization.
 - For this, firstly I had to install Apache Zookeeper and Apache Kafka.
 
-### What is Apache Zookeeper?
+### ***What is Apache Zookeeper?***
 *ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. All of these kinds of services are used in some form or another by distributed applications. Each time they are implemented there is a lot of work that goes into fixing the bugs and race conditions that are inevitable. Because of the difficulty of implementing these kinds of services, applications initially usually skimp on them, which make them brittle in the presence of change and difficult to manage. Even when done correctly, different implementations of these services lead to management complexity when the applications are deployed.*
 
-### What is Apache Kafka?
+### ***What is Apache Kafka?***
 *Apache Kafka is a distributed publish-subscribe messaging system and a robust queue that can
 handle a high volume of data and enables you to pass messages from one end-point to another.
 Kafka is suitable for both offline and online message consumption. Kafka messages are persisted
@@ -72,7 +72,7 @@ time streaming data analysis.*
 - To display the prediction in real time, we first need to start the Zookeeper server and then start the Kafka server.
 - I created the Producer and Consumer scripts in Python3 and ran them through Flask app.
 
-### What is Flask?
+### ***What is Flask?***
 *Flask is a web application framework written in Python. Flask is based on the Werkzeug WSGI
 toolkit and Jinja2 template engine. The Flask framework uses Werkzeug as one of its bases.
 Werkzeug is a WSGI toolkit, which implements requests, response objects, and other utility functions. This enables building a web framework on top of it.
