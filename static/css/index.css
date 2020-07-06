@@ -1,0 +1,61 @@
+#header{
+    text-align: center;
+    font-family: Helvetica;
+    color: red;
+    font-size: 120%;
+}
+
+#sensorDiv1 h1{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#sensorDiv1{
+    font-family: Helvetica;
+    color: white;
+    background-color: #ff0000;
+    width: 50%;
+    float: left;
+    margin: auto;
+    height: 50px;
+    text-align: center;
+    display: table;
+    animation: blinker 2s alternate infinite;
+}
+
+#sensorDiv2 h1{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#sensorDiv2{
+    font-family: Helvetica;
+    color: white;
+    background-color: #0a6ebd;
+    margin: auto;
+    height: 50px;
+    text-align: center;
+    float: left;
+    width: 50%;
+    display: table;
+    animation: blinker 2s alternate-reverse infinite;
+}
+
+@keyframes blinker {
+    from, 50% {
+        opacity: 0;
+    }
+  to, 50% {
+    opacity: 1;
+  }
+}
+
+img{
+    width: 200px;
+}
+
+#chart{
+    height: 350px;
+    width: 1200px;
+    margin: auto;
+}
