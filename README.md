@@ -134,7 +134,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 - Now run the **Producer.py** file. This will start the Producer that will serve the messages by creating the topic called **GoogleStock**.
 - Now run **app.py** file. This will run the **Consumer.py** file and start receiving the messages published by **Producer.py**.
 - The **app.py** is the flask application which calls the HTML template in the templates folder which uses the CSS and JS files in the static folder.
-- Open the browser to see the graph displayed on 127.0.0.1:5000.
+- Open the browser to see the graph displayed on 127.0.0.1:5000 shown in the below screeenshot.
 <img src=Screenshots/graph.png height=”100”>
 
 #
@@ -142,10 +142,10 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 ## Solving error while running project
 To solve the **PYSPARK_PYTHON** and **PYSPARK_DRIVER_PYTHON** error while running PySpark in PyCharm, do the following in files wherever required:
 - Click on the **Edit Configurations** besides the Run button.
-<img src=Screenshots/edit.png width=”100” >
+<img src=Screenshots/edit.png height=”100” >
 
 - In **Environmental Variables**, click on the small page button.
-<img src=Screenshots/environmentalVars.png width=”100” >
+<img src=Screenshots/environmentalVars.png height=”100” >
 
 - And add the following variables in it and click on **OK**  and then **Apply**.
-<img src=Screenshots/addingVars.png width=”100” >
+<img src=Screenshots/addingVars.png height=”100” >
