@@ -16,7 +16,7 @@ $ sudo apt-get install python3-pip
 - [Apache Kafka](https://kafka.apache.org/downloads)
 - [Amazon AWS Account](https://aws.amazon.com/)
 - [Google Historical Data](https://in.finance.yahoo.com/quote/GOOGL?p=GOOGL&.tsrc=fin-srch), download CSV file selecting the range
-- Requirements.txt
+- [Requirements.txt](https://github.com/Wolvarun9295/StockMarketPredictionProject/blob/master/Requirements.txt)
 
 Use the following command to install the .txt file:
 
@@ -116,8 +116,8 @@ $ aws configure list
 
 ### Step 3:
 - Run the **createBucket.py** file. This will create the bucket in the AWS S3.
-- Run the **uploadFile.py** file. This will upload the CSV file in your AWS S3.
-- Run the **fetchFile.py** file. This will fetch the CSV file from your AWS S3.
+- Run the **uploadFile.py** file. This will upload the CSV file in your bucket.
+- Run the **fetchFile.py** file. This will fetch the CSV file from your bucket.
 - Run the **dataCleaner.py** file. This is clean the data in CSV file.
 - Run the **modelBuilder.py** file. This will build the model based on the data and save the model. It will be saved in the project folder named **GoogleStockModel**.
 
@@ -134,11 +134,13 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 - Now run the **Producer.py** file. This will start the Producer that will serve the messages by creating the topic called **GoogleStock**.
 - Now run **app.py** file. This will run the **Consumer.py** file and start receiving the messages published by **Producer.py**.
 - The **app.py** is the flask application which calls the HTML template in the templates folder which uses the CSS and JS files in the static folder.
+- Open the browser to see the graph displayed on 127.0.0.1:5000.
+<img src=Screenshots/graph.png height=”100”>
 
 #
 
-## Error faced while running project
-To solve the PYSPARK_PYTHON and PYSPARK_DRIVER_PYTHON error while running PySpark in PyCharm, do the following:
+## Solving error while running project
+To solve the **PYSPARK_PYTHON** and **PYSPARK_DRIVER_PYTHON** error while running PySpark in PyCharm, do the following in files wherever required:
 - Click on the **Edit Configurations** besides the Run button.
 <img src=Screenshots/edit.png width=”100” >
 
