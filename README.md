@@ -2,6 +2,8 @@
 
 This project focuses on predicting Google stock price on real time data. I used past 10 years worth of historical Google (GOOGL) stock data for training and built an effective model for predicting stock prices and displayed the predictions on webpage using Flask, Kafka and Highcharts.
 
+#
+
 ## Prerequisites:
 
 - Python3
@@ -71,6 +73,8 @@ sudo snap install code --classic
 toolkit and Jinja2 template engine. The Flask framework uses Werkzeug as one of its bases. Werkzeug is a WSGI toolkit, which implements requests, response objects, and other utility functions. This enables building a web framework on top of it. Web Server Gateway Interface (WSGI ) is a specification for a universal interface between the web server and the web applications. It has been adopted as a standard for Python web application development. Jinja2 is a popular templating engine for Python. A web templating system combines a template with a certain data source to render dynamic web pages.***
 
 - Finally, to display the graph I used Highcharts JS in my HTML file and styled it through CSS.
+
+#
 
 ## Setup to run the project
 ### Step 1:
