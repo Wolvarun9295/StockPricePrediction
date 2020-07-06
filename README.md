@@ -8,8 +8,8 @@ This project focuses on predicting Google stock price on real time data. I used 
 
 - Python3
 ```
-sudo apt-get install python3
-sudo apt-get install python3-pip
+$ sudo apt-get install python3
+$ sudo apt-get install python3-pip
 ```
 - [JDK 8 ](https://jdk.java.net/) - [Read this to install Java](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/JAVA.txt)
 - [Apache Zookeeper](https://zookeeper.apache.org/) - [Read this to install Zookeeper](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/ZOOKEEPER.txt)
@@ -21,16 +21,16 @@ sudo apt-get install python3-pip
 Use the following command to install the .txt file:
 
 ```
-sudo pip3 install -r Requirements.txt
+$ sudo pip3 install -r Requirements.txt
 ```
 
 **NOTE:** This project has been created using Jetbrains PyCharm Community Edition and Visual Studio Code. You can install both from [Snap Store](https://snapcraft.io/)
 
 ```
-sudo apt update
-sudo apt install snapd
-sudo snap install pycharm-community –classic
-sudo snap install code --classic
+$ sudo apt update
+$ sudo apt install snapd
+$ sudo snap install pycharm-community –classic
+$ sudo snap install code --classic
 ```
 #
 
@@ -90,11 +90,11 @@ toolkit and Jinja2 template engine. The Flask framework uses Werkzeug as one of 
 ### Step 2:
 - Install the Amazon CLI (Command Line Interface) on your local machine. (requires curl)
 ```
-sudo apt-get install curl
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-aws –version
+$ sudo apt-get install curl
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+$ unzip awscliv2.zip
+$ sudo ./aws/install
+$ aws –version
 ```
 - On your local machine, make a folder **.aws** in root folder and touch two files in the folder: **config** and **credentials**. (to make the aws keys globally accessible)
 - Add the following lines in config:
@@ -110,8 +110,8 @@ aws_secret_access_key=your secret access key
 ```
 - Now run the following commands to check if the keys are configured and set respectively:
 ```
-aws configure
-aws configure list
+$ aws configure
+$ aws configure list
 ```
 
 ### Step 3:
@@ -122,11 +122,11 @@ aws configure list
 - Run the **modelBuilder.py** file. This will build the model based on the data.
 - After building the model, on terminal start the Zookeeper and Kafka servers.
 ```
-cd zookeeper
-./bin/zkServer.sh start ./conf/zoo.cfg
+$ cd zookeeper
+$ ./bin/zkServer.sh start ./conf/zoo.cfg
 
-cd kafka
-./bin/kafka-server-start.sh ./config/server-properties
+$ cd kafka
+$ ./bin/kafka-server-start.sh ./config/server-properties
 ```
 - Now run the **Producer.py** file. This will start the Producer that will serve the messages by creating the topic called **GoogleStock**.
 - Now run **app.py** file. This will run the **Consumer.py** file and start receiving the messages published by **Producer.py**.
