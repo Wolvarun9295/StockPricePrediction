@@ -119,7 +119,9 @@ $ aws configure list
 - Run the **uploadFile.py** file. This will upload the CSV file in your AWS S3.
 - Run the **fetchFile.py** file. This will fetch the CSV file from your AWS S3.
 - Run the **dataCleaner.py** file. This is clean the data in CSV file.
-- Run the **modelBuilder.py** file. This will build the model based on the data.
+- Run the **modelBuilder.py** file. This will build the model based on the data and save the model. It will be saved in the project folder named **GoogleStockModel**.
+
+### Step 4:
 - After building the model, on terminal start the Zookeeper and Kafka servers.
 ```
 $ cd zookeeper
@@ -128,5 +130,12 @@ $ ./bin/zkServer.sh start ./conf/zoo.cfg
 $ cd kafka
 $ ./bin/kafka-server-start.sh ./config/server-properties
 ```
+- Create a **key.txt** file in the project and add your AlphaVantage key in it so that the **Producer.py** file can access it.
 - Now run the **Producer.py** file. This will start the Producer that will serve the messages by creating the topic called **GoogleStock**.
 - Now run **app.py** file. This will run the **Consumer.py** file and start receiving the messages published by **Producer.py**.
+- The **app.py** is the flask application which calls the HTML template in the templates folder which uses the CSS and JS files in the static folder.
+
+#
+
+## Error faced while running project
+
