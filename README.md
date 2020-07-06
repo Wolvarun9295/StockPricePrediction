@@ -140,7 +140,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 - Open the browser to see the graph displayed on 127.0.0.1:5000 shown in the below screeenshot.
 <img src=Screenshots/graph.gif height=”100”>
 
-**NOTE:** The graph needs to be kept running for at least 30 mins before it starts giving near accurate predictions, and for over an hour or full market hours to activate the hour and for day filters respectively.
+**NOTE:** The graph needs to be kept running for at least 30 mins before it starts giving near accurate predictions, and for over an hour or full market hours to activate the hour and day filters respectively.
 
 #
 
