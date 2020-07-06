@@ -9,7 +9,7 @@ This project focuses on predicting Google stock price on real time data. I used 
 sudo apt-get install python3
 sudo apt-get install python3-pip
 ```
-- [JDK 8 ](https://jdk.java.net/) [Read this to install Java](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/JAVA.txt)
+- [JDK 8 ](https://jdk.java.net/) - [Read this to install Java](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/JAVA.txt)
 - [Apache Zookeeper](https://zookeeper.apache.org/)
 - [Apache Kafka](https://kafka.apache.org/downloads)
 - [Amazon AWS Account](https://aws.amazon.com/)
@@ -69,7 +69,15 @@ on the disk and replicated within the cluster to prevent data loss. Kafka is bui
 ZooKeeper synchronization service. It integrates very well with Apache Storm and Spark for real-
 time streaming data analysis.*
 
+- To display the prediction in real time, we first need to start the Zookeeper server and then start the Kafka server.
+- I created the Producer and Consumer scripts in Python3 and ran them through Flask app.
 
+### What is Flask?
+*Flask is a web application framework written in Python. Flask is based on the Werkzeug WSGI
+toolkit and Jinja2 template engine. The Flask framework uses Werkzeug as one of its bases.
+Werkzeug is a WSGI toolkit, which implements requests, response objects, and other utility functions. This enables building a web framework on top of it.
+Web Server Gateway Interface (WSGI ) is a specification for a universal interface between the web server and the web applications. It has been adopted as a standard for Python web application development.
+Jinja2 is a popular templating engine for Python. A web templating system combines a template with a certain data source to render dynamic web pages.*
 
 ## Setup to run the project
 ### Step 1:
