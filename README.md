@@ -45,7 +45,18 @@ Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python
 An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services' (AWS) Simple Storage Service (S3), an object storage offering. Amazon S3 buckets, which are similar to file folders, store objects, which consist of data and its descriptive metadata.
 
 - After creating and uploading my CSV file, I fetched the file from my S3 bucket with the help of PySpark.
+- Since no data is clean and has missing values, it needs to be cleaned.
+- Now after the data has been cleaned, we can now built a model using Machine Learning. Keep in mind, the less data we use the higher chances of underfitting occur and the more data we use, the higher chances of overfitting occur. So we need to choose the data not more, not less.
+- The model building process has been done using PySpark’s mlib Library.
+- I used Linear Regression to train the model and used the Regression Evaluator to give the accuracy of my model.
+- After the successfull buliding of my model, I needed to check if it works on real data. For that I registered on a website called AlphaVantage and generated the key to access the live data from their site.
 
+### What is AlphaVantage?
+Alpha Vantage Inc. is a company that provides realtime and historical stock APIs as well as forex
+(FX) and digital/crypto currency data feeds.
+
+- Now comes the fun part of testing the model using Data Visualization.
+- For this, firstly I had to 
 
 
 ## Setup to run the project
