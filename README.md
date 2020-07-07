@@ -97,12 +97,12 @@ $ sudo ./aws/install
 $ aws –version
 ```
 - On your local machine, make a folder **.aws** in root folder and touch two files in the folder: **config** and **credentials**. (to make the aws keys globally accessible)
-- Add the following lines in config:
+- Add the following lines in **config**:
 ```
 [default]
 region=region of your choice
 ```
-- Add the following lines in credentials:
+- Add the following lines in **credentials**:
 ```
 [default]
 aws_access_key_id=your access key
@@ -137,7 +137,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 - Now run the **Producer.py** file. This will start the Producer that will serve the messages by creating the topic called **GoogleStock**.
 - Now run **app.py** file. This will run the **Consumer.py** file and start receiving the messages published by **Producer.py**.
 - The **app.py** is the flask application which calls the HTML template in the templates folder which uses the CSS and JS files in the static folder.
-- Open the browser to see the graph displayed on 127.0.0.1:5000 shown in the below screeenshot.
+- Open the browser to see the graph displayed on **127.0.0.1:5000** shown in the below screeenshot.
 <img src=Screenshots/graph.gif height=”100”>
 
 **NOTE:** The graph needs to be kept running for at least 30 mins before it starts giving near accurate predictions, and for over an hour or full market hours to activate the hour and day filters respectively.
@@ -145,8 +145,8 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 #
 
 ## Solving error while running project
-***Two kinds of errors that we face is while running PySpark code: one is p4yj error which is solved by installing p4yj package. The other is PySpark worker is running in Python2.7 error. ***
-To solve the **PYSPARK_PYTHON** and **PYSPARK_DRIVER_PYTHON** error while running PySpark in PyCharm, do the following in files wherever required:
+- ***Two kinds of errors that we face is while running PySpark code: one is py4j error which is solved by installing py4j package. The other is PySpark worker is running in Python2.7 error.***
+- To solve the **PYSPARK_PYTHON** and **PYSPARK_DRIVER_PYTHON** error while running PySpark in PyCharm, do the following in files wherever required:
 - Click on the **Edit Configurations** besides the Run button.
 <img src=Screenshots/edit.png height=”100” >
 
@@ -168,4 +168,4 @@ To solve the **PYSPARK_PYTHON** and **PYSPARK_DRIVER_PYTHON** error while runnin
 
 © Varun I. Nagrare
 
-Lincensed under the [MIT License](LICENSE)
+Licensed under the [MIT License](LICENSE)
