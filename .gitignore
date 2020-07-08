@@ -1,0 +1,8 @@
+﻿# Compilation files
+__pycache__
+
+# Keys
+*.txt
+
+# PyCharm files
+.idea
