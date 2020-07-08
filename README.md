@@ -172,4 +172,4 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 
 © Varun I. Nagrare
 
-Licensed under the [MIT License](LICENSE)
+Licensed under the [MIT License](LICENSE.md)
