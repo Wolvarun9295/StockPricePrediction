@@ -5,7 +5,7 @@ This project focuses on predicting Google stock price on real time data. I used 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Wolvarun9295/StockMarketPredictionProject?color=2188FC&label=Project%20Size&style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/Wolvarun9295/StockMarketPredictionProject?color=FF3D37&label=Issues&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Wolvarun9295/StockMarketPredictionProject?color=5DFF00&label=Last%20Commit&style=plastic)
-[![GitHub license](https://img.shields.io/github/license/Wolvarun9295/StockMarketPredictionProject?label=License)](https://github.com/Wolvarun9295/StockMarketPredictionProject/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Wolvarun9295/StockMarketPredictionProject?color=FF7800&label=License)](https://github.com/Wolvarun9295/StockMarketPredictionProject/blob/master/LICENSE)
 
 #
 
