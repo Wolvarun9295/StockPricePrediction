@@ -165,7 +165,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 #
 
 ## Deployment Process
-- First create an EC2 instance, download the .pem file which is available at the time of instance creation.
+- First create an EC2 instance, download the **filename.pem** file which is available at the time of instance creation.
 
 ### ***What is Amazon EC2?***
 ***Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.***
@@ -190,8 +190,8 @@ $ python3 -V
 $ sudo apt-get install python3-pip
 ```
 - Next clone your project using git on the instance.
-- To ensure everything required package is available on the instance, follow the [Prerequisites](Prerequisites) mentioned above.
-- For running the flask app on AWS, we need two additional packages: nginx and gunicorn3 (since project is running on Python3)
+- To ensure everything required package is available on the instance, follow the [Prerequisites](#Prerequisites) mentioned above.
+- For running the flask app on AWS, we need two additional packages: *nginx* and *gunicorn3* (since project is running on Python3)
 ```
 $ sudo apt-get install nginx
 $ sudo apt-get install gunicorn3
@@ -202,7 +202,7 @@ $ sudo apt-get install gunicorn3
 ### ***What is Gunicorn?***
 ***Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.***
 
-- Now go in the sites-enabled folder inside nginx and do the following:
+- Now go in the *sites-enabled* folder inside nginx and do the following:
 ```
 $ cd /etc/nginx/sites-enabled/
 $ sudo nano flaskapp
@@ -222,12 +222,12 @@ $ sudo service nginx restart
 ```
 - Follow the videos from [1–6](https://www.youtube.com/playlist?list=PL5KTLzN85O4KTCYzsWZPTP0BfRj6I_yUP) for reference.
 - Finally start your Zookeeper and Kafka servers on the current termianl as usual.
-- Now open two additional terminals and login to the same instance from them and run the *Producer.py* and *app.py* files on each terminals as follows:
+- Now open two additional terminals and login to the same instance from them and run the **Producer.py** and **app.py** files on each terminals as follows:
 ```
 $ python3 Producer.py
 $ gunicorn3 app:app
 ```
-- Now after successfull execution of the flask app, enter your.elastic.IP (No port number necessary) in your browser and voila, the flask app is up and running.
+- Now after successfull execution of the flask app, enter **your.elastic.IP** (No port number necessary) in your browser and voila, the flask app is up and running.
 
 ## References
 - [Keith, The Coder – First 3 videos for AWS bucket operations](https://www.youtube.com/playlist?list=PLlQ1p0CY-uJVOXeu6laL4Dqq-Ocabuqbn)
