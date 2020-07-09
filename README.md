@@ -189,6 +189,7 @@ $ sudo apt-get update
 $ python3 -V
 $ sudo apt-get install python3-pip
 ```
+- Install Java. Refer **[this](#Prerequisites)**
 - Next clone your project using git on the instance.
 - To ensure everything required package is available on the instance, follow the **[Prerequisites](#Prerequisites)** mentioned above.
 - For running the flask app on AWS, we need two additional packages: **nginx** and **gunicorn3** (since project is running on Python3)
