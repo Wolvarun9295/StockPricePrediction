@@ -164,9 +164,76 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 
 #
 
+## Deployment Process
+- First create an EC2 instance, download the .pem file which is available at the time of instance creation.
+
+### ***What is Amazon EC2?***
+***Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.***
+
+- Now before logging in to the instance, make sure you assign an elastic IP to your instance. For this refer the 7th video of [this](https://youtu.be/CIVI-DIzCFk) link first before going forward. This will ensure that your IP address doesn’t change when you stop or reboot the instance and will also save some usage charges.
+
+### ***What is Amazon Elastic IP address?***
+***An Elastic IP address is a reserved public IP address that you can assign to any EC2 instance in a particular region, until you choose to release it. When you associate an Elastic IP address with an EC2 instance, it replaces the default public IP address. If an external hostname was allocated to the instance from your launch settings, it will also replace this hostname; otherwise, it will create one for the instance. The Elastic IP address remains in place through events that normally cause the address to change, such as stopping or restarting the instance.***
+
+- Open the terminal on your local machine and make your filename.pem file readable to avoid permission issues during logging in the instance.
+```
+$ chmod 400 filename.pem
+```
+- Now login to the instance using the .pem file and instance address.
+```
+$ ssh -i filename.pem ubuntu@your.elastic.IP
+```
+- After successfully logging in your instance, do the following as a good practice:
+```
+$ sudo apt-get update
+$ python3 -V
+$ sudo apt-get install python3-pip
+```
+- Next clone your project using git on the instance.
+- To ensure everything required package is available on the instance, follow the [Prerequisites](Prerequisites) mentioned above.
+- For running the flask app on AWS, we need two additional packages: nginx and gunicorn3 (since project is running on Python3)
+```
+$ sudo apt-get install nginx
+$ sudo apt-get install gunicorn3
+```
+### ***What is NGINX?***
+***NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability. In addition to its HTTP server capabilities, NGINX can also function as a proxy server for email (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP, TCP, and UDP servers.***
+
+### ***What is Gunicorn?***
+***Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.***
+
+- Now go in the sites-enabled folder inside nginx and do the following:
+```
+$ cd /etc/nginx/sites-enabled/
+$ sudo nano flaskapp
+
+# Inside the flaskapp add the following:
+server{
+	listen : 80;
+	server_name : your.elastic.IP;
+	location / {
+		proxy_pass http://127.0.0.1:8000;
+	}
+}
+```
+- Save the above file and restart the nginx service.
+```
+$ sudo service nginx restart
+```
+- Follow the videos from [1–6](https://www.youtube.com/playlist?list=PL5KTLzN85O4KTCYzsWZPTP0BfRj6I_yUP) for reference.
+- Finally start your Zookeeper and Kafka servers on the current termianl as usual.
+- Now open two additional terminals and login to the same instance from them and run the *Producer.py* and *app.py* files on each terminals as follows:
+```
+$ python3 Producer.py
+$ gunicorn3 app:app
+```
+- Now after successfull execution of the flask app, enter your.elastic.IP (No port number necessary) in your browser and voila, the flask app is up and running.
+
 ## References
 - [Keith, The Coder – First 3 videos for AWS bucket operations](https://www.youtube.com/playlist?list=PLlQ1p0CY-uJVOXeu6laL4Dqq-Ocabuqbn)
 - [Avery Makes Games – AlphaVantage key generating and pulling live stock data](https://youtu.be/339AfkUQ67o)
+- [Srce Cde – First 7 videos for deploying flask app on AWS](https://www.youtube.com/playlist?list=PL5KTLzN85O4KTCYzsWZPTP0BfRj6I_yUP)
+- [Linux Help – Scheduling the Cron Job on AWS](https://youtu.be/CIVI-DIzCFk)
 
 #
 
