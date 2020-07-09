@@ -2,7 +2,7 @@
 
 This project focuses on predicting Google stock price on real time data. I used past 10 years worth of historical Google (GOOGL) stock data for training and built an effective model for predicting stock prices and displayed the predictions on webpage using Flask, Kafka and Highcharts.
 
-!![GitHub repo size](https://img.shields.io/github/repo-size/Wolvarun9295/StockMarketPredictionProject?color=2188FC&label=Repo%20Size&style=plastic)
+![GitHub repo size](https://img.shields.io/github/repo-size/Wolvarun9295/StockMarketPredictionProject?color=2188FC&label=Repo%20Size&style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Wolvarun9295/StockMarketPredictionProject?color=BE33FF&label=Code%20Size&style=plastic)
 ![GitHub issues](https://img.shields.io/github/issues/Wolvarun9295/StockMarketPredictionProject?color=FF3D37&label=Issues&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Wolvarun9295/StockMarketPredictionProject?color=5DFF00&label=Last%20Commit&style=plastic)
