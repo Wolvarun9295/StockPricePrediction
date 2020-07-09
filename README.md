@@ -190,7 +190,7 @@ $ python3 -V
 $ sudo apt-get install python3-pip
 ```
 - Next clone your project using git on the instance.
-- To ensure everything required package is available on the instance, follow the [Prerequisites](#Prerequisites) mentioned above.
+- To ensure everything required package is available on the instance, follow the **[Prerequisites](#Prerequisites)** mentioned above.
 - For running the flask app on AWS, we need two additional packages: **nginx** and **gunicorn3** (since project is running on Python3)
 ```
 $ sudo apt-get install nginx
@@ -229,6 +229,65 @@ $ python3 Producer.py
 $ gunicorn3 app:app
 ```
 - Now after successfull execution of the flask app, enter **your.elastic.IP** (No port number necessary) in your browser and voila, the flask app is up and running.
+
+#
+
+## Job Scheduling on AWS
+- To perform job scheduling on AWS, we need to make four bash executable files: **zookeeper.sh, kafka.sh, ProducerJob.sh and AppJob.sh** and store them in the project directory.
+```
+# In zookeeper.sh add the following:
+/home/ubuntu/zookeeper/bin/zkServer.sh start /home/ubuntu/zookeeper/conf/zoo.cfg
+
+# In kafka.sh add the following:
+/home/ubuntu/kafka/bin/kafka-server-start.sh /home/ubuntu/kafka/config/server.properties
+
+# In ProducerJob.sh add the following:
+python3 Producer.py
+
+# In AppJob.sh add the following:
+gunicorn3 app:app
+
+```
+- Save the above four files and make them executable using the following commands:
+```
+$ chmod u+x zookeeper.sh
+$ chmod u+x kafka.sh
+$ chmod u+x ProducerJob.sh
+$ chmod u+x AppJob.sh
+```
+- Now check if there are any cron jobs running:
+```
+$ crontab -l
+```
+### ***What is Cron and Crontab?***
+***Cron is a scheduling daemon that executes tasks at specified intervals. These tasks are called cron jobs and are mostly used to automate system maintenance or administration.
+For example, you could set a cron job to automate repetitive tasks such as backing up databases or data, updating the system with the latest security patches, checking the disk space usage, sending emails, and so on.
+The cron jobs can be scheduled to run by a minute, hour, day of the month, month, day of the week, or any combination of these.***
+```
+* * * * * command(s)
+- - - - -
+| | | | |
+| | | | ----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | ------- Month (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour (0 - 23)
+------------- Minute (0 - 59)
+```
+- Now edit the crontab file and add the following:
+```
+$ crontab -e
+
+# Select nano option
+
+# Add the following in the file:
+30 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/zookeeper.sh
+35 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/kafka.sh
+40 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/ProducerJob.sh
+45 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/AppJob.sh
+```
+- Now check the output on the browser using **your.elastic.IP**.
+
+#
 
 ## References
 - [Keith, The Coder – First 3 videos for AWS bucket operations](https://www.youtube.com/playlist?list=PLlQ1p0CY-uJVOXeu6laL4Dqq-Ocabuqbn)
