@@ -279,12 +279,14 @@ $ crontab -e
 
 # Select nano option
 
-# Add the following in the file:
+# Add the following in the file (Ex: I want to start my project everyday at 10:30 AM):
 30 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/zookeeper.sh
 35 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/kafka.sh
 40 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/ProducerJob.sh
 45 10 * * * /bin/sh /home/ubuntu/StockMarketPredictionProject/AppJob.sh
 ```
+- Save and exit.
+- Since we have given 5 minutes interval between all the four files, we need to wait 20 minutes.
 - Now check the output on the browser using **your.elastic.IP**.
 
 #
