@@ -18,8 +18,8 @@ $ sudo apt-get install python3
 $ sudo apt-get install python3-pip
 ```
 - [JDK 8 ](https://jdk.java.net/) - [Read this to install Java](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/JAVA.txt)
-- [Apache Zookeeper](https://zookeeper.apache.org/) - [Read this to install Zookeeper](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/ZOOKEEPER.txt)
-- [Apache Kafka](https://kafka.apache.org/downloads)
+- [Apache Zookeeper](https://zookeeper.apache.org/releases.html) - [Read this to install Zookeeper](https://github.com/Wolvarun9295/InstallationDocuments/blob/master/ZOOKEEPER.txt)
+- [Apache Kafka](https://kafka.apache.org/downloads) – [Read this to run Kafka](https://kafka.apache.org/quickstart)
 - [Amazon AWS Account](https://aws.amazon.com/)
 - [Google Historical Data](https://in.finance.yahoo.com/quote/GOOGL?p=GOOGL&.tsrc=fin-srch), download CSV file selecting the range
 - [Requirements.txt](Requirements.txt)
