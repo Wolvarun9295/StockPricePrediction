@@ -49,7 +49,7 @@ $ sudo snap install code --classic
 #### ***What is boto3?***
 ***Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of services like Amazon S3 and Amazon EC2.***
 
-### ***What is Amazon S3 Bucket?***
+#### ***What is Amazon S3 Bucket?***
 ***An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services' (AWS) Simple Storage Service (S3), an object storage offering. Amazon S3 buckets, which are similar to file folders, store objects, which consist of data and its descriptive metadata.***
 
 - After creating and uploading my CSV file, I fetched the file from my S3 bucket with the help of Pandas.
@@ -57,28 +57,28 @@ $ sudo snap install code --classic
 - Now after the data has been cleaned, we can now built a model using Machine Learning. Keep in mind, the less data we use the higher chances of underfitting occur and the more data we use, the higher chances of overfitting occur. So we need to choose the data not more, not less.
 - The model building process has been done using PySpark’s mlib Library.
 
-### ***What is PySpark?***
+#### ***What is PySpark?***
 ***Apache Spark is written in Scala programming language. To support Python with Spark, Apache Spark community released a tool, PySpark. Using PySpark, you can work with RDDs in Python programming language also. It is because of a library called Py4j that they are able to achieve this.***
 
 - I used Linear Regression to train the model and used the Regression Evaluator to give the accuracy of my model.
 - After the successfull buliding of my model, I needed to check if it works on real data. For that I registered on a website called AlphaVantage and generated the key to access the live data from their site.
 
-### ***What is AlphaVantage?***
+#### ***What is AlphaVantage?***
 ***Alpha Vantage Inc. is a company that provides realtime and historical stock APIs as well as forex (FX) and digital/crypto currency data feeds.***
 
 - Now comes the fun part of testing the model using Data Visualization.
 - For this, firstly I had to install Apache Zookeeper and Apache Kafka.
 
-### ***What is Apache Zookeeper?***
+#### ***What is Apache Zookeeper?***
 ***ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. All of these kinds of services are used in some form or another by distributed applications. Each time they are implemented there is a lot of work that goes into fixing the bugs and race conditions that are inevitable. Because of the difficulty of implementing these kinds of services, applications initially usually skimp on them, which make them brittle in the presence of change and difficult to manage. Even when done correctly, different implementations of these services lead to management complexity when the applications are deployed.***
 
-### ***What is Apache Kafka?***
+#### ***What is Apache Kafka?***
 ***Apache Kafka is a distributed publish-subscribe messaging system and a robust queue that can handle a high volume of data and enables you to pass messages from one end-point to another. Kafka is suitable for both offline and online message consumption. Kafka messages are persisted on the disk and replicated within the cluster to prevent data loss. Kafka is built on top of the ZooKeeper synchronization service. It integrates very well with Apache Storm and Spark for real-time streaming data analysis.***
 
 - To display the prediction in real time, we first need to start the Zookeeper server and then start the Kafka server.
 - I created the Producer and Consumer scripts in Python3 and ran them through Flask app.
 
-### ***What is Flask?***
+#### ***What is Flask?***
 ***Flask is a web application framework written in Python. Flask is based on the Werkzeug WSGI
 toolkit and Jinja2 template engine. The Flask framework uses Werkzeug as one of its bases. Werkzeug is a WSGI toolkit, which implements requests, response objects, and other utility functions. This enables building a web framework on top of it. Web Server Gateway Interface (WSGI ) is a specification for a universal interface between the web server and the web applications. It has been adopted as a standard for Python web application development. Jinja2 is a popular templating engine for Python. A web templating system combines a template with a certain data source to render dynamic web pages.***
 
@@ -167,12 +167,12 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 ## Deployment Process
 - First create an EC2 instance, download the **filename.pem** file which is available at the time of instance creation.
 
-### ***What is Amazon EC2?***
+#### ***What is Amazon EC2?***
 ***Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.***
 
 - Now before logging in to the instance, make sure you assign an elastic IP to your instance. For this refer the 7th video of **[this](https://youtu.be/CIVI-DIzCFk)** link first before going forward. This will ensure that your IP address doesn’t change when you stop or reboot the instance and will also save some usage charges.
 
-### ***What is Amazon Elastic IP address?***
+#### ***What is Amazon Elastic IP address?***
 ***An Elastic IP address is a reserved public IP address that you can assign to any EC2 instance in a particular region, until you choose to release it. When you associate an Elastic IP address with an EC2 instance, it replaces the default public IP address. If an external hostname was allocated to the instance from your launch settings, it will also replace this hostname; otherwise, it will create one for the instance. The Elastic IP address remains in place through events that normally cause the address to change, such as stopping or restarting the instance.***
 
 - Open the terminal on your local machine and make your filename.pem file readable to avoid permission issues during logging in the instance.
@@ -196,10 +196,10 @@ $ sudo apt-get install python3-pip
 $ sudo apt-get install nginx
 $ sudo apt-get install gunicorn3
 ```
-### ***What is NGINX?***
+#### ***What is NGINX?***
 ***NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability. In addition to its HTTP server capabilities, NGINX can also function as a proxy server for email (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP, TCP, and UDP servers.***
 
-### ***What is Gunicorn?***
+#### ***What is Gunicorn?***
 ***Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.***
 
 - Now go in the **sites-enabled** folder inside nginx and do the following:
@@ -259,7 +259,7 @@ $ chmod u+x AppJob.sh
 ```
 $ crontab -l
 ```
-### ***What is Cron and Crontab?***
+#### ***What is Cron and Crontab?***
 ***Cron is a scheduling daemon that executes tasks at specified intervals. These tasks are called cron jobs and are mostly used to automate system maintenance or administration.
 For example, you could set a cron job to automate repetitive tasks such as backing up databases or data, updating the system with the latest security patches, checking the disk space usage, sending emails, and so on.
 The cron jobs can be scheduled to run by a minute, hour, day of the month, month, day of the week, or any combination of these.***
