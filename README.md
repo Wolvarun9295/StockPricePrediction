@@ -170,7 +170,7 @@ $ ./bin/kafka-server-start.sh ./config/server-properties
 ### ***What is Amazon EC2?***
 ***Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.***
 
-- Now before logging in to the instance, make sure you assign an elastic IP to your instance. For this refer the 7th video of [this](https://youtu.be/CIVI-DIzCFk) link first before going forward. This will ensure that your IP address doesn’t change when you stop or reboot the instance and will also save some usage charges.
+- Now before logging in to the instance, make sure you assign an elastic IP to your instance. For this refer the 7th video of **[this](https://youtu.be/CIVI-DIzCFk)** link first before going forward. This will ensure that your IP address doesn’t change when you stop or reboot the instance and will also save some usage charges.
 
 ### ***What is Amazon Elastic IP address?***
 ***An Elastic IP address is a reserved public IP address that you can assign to any EC2 instance in a particular region, until you choose to release it. When you associate an Elastic IP address with an EC2 instance, it replaces the default public IP address. If an external hostname was allocated to the instance from your launch settings, it will also replace this hostname; otherwise, it will create one for the instance. The Elastic IP address remains in place through events that normally cause the address to change, such as stopping or restarting the instance.***
@@ -191,7 +191,7 @@ $ sudo apt-get install python3-pip
 ```
 - Next clone your project using git on the instance.
 - To ensure everything required package is available on the instance, follow the [Prerequisites](#Prerequisites) mentioned above.
-- For running the flask app on AWS, we need two additional packages: *nginx* and *gunicorn3* (since project is running on Python3)
+- For running the flask app on AWS, we need two additional packages: **nginx** and **gunicorn3** (since project is running on Python3)
 ```
 $ sudo apt-get install nginx
 $ sudo apt-get install gunicorn3
@@ -202,12 +202,13 @@ $ sudo apt-get install gunicorn3
 ### ***What is Gunicorn?***
 ***Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.***
 
-- Now go in the *sites-enabled* folder inside nginx and do the following:
+- Now go in the **sites-enabled** folder inside nginx and do the following:
 ```
 $ cd /etc/nginx/sites-enabled/
 $ sudo nano flaskapp
-
-# Inside the flaskapp add the following:
+```
+- Inside the flaskapp file add the following:
+```
 server{
 	listen : 80;
 	server_name : your.elastic.IP;
@@ -220,8 +221,8 @@ server{
 ```
 $ sudo service nginx restart
 ```
-- Follow the videos from [1–6](https://www.youtube.com/playlist?list=PL5KTLzN85O4KTCYzsWZPTP0BfRj6I_yUP) for reference.
-- Finally start your Zookeeper and Kafka servers on the current termianl as usual.
+- Follow the videos from **[1–6](https://www.youtube.com/playlist?list=PL5KTLzN85O4KTCYzsWZPTP0BfRj6I_yUP)** for reference.
+- Finally start your Zookeeper and Kafka servers on the current terminal as usual.
 - Now open two additional terminals and login to the same instance from them and run the **Producer.py** and **app.py** files on each terminals as follows:
 ```
 $ python3 Producer.py
