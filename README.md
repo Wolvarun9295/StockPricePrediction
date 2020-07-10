@@ -288,6 +288,14 @@ $ crontab -e
 ```
 - Save and exit.
 - Since we have given 5 minutes interval between all the four files, we need to wait 20 minutes.
+- To check if all cron jobs are running as intended do the following:
+```
+$ ps -ef | grep filename.sh
+
+# or
+
+$ ps -ef | grep taskname
+```
 - Now check the output on the browser using **your.elastic.IP**.
 
 #
