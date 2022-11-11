@@ -8,7 +8,7 @@ Jinja2==2.11.2
 kafka-python==2.0.1
 pandas==1.0.5
 py4j==0.10.7
-pyspark==2.4.6
+pyspark==3.2.2
 pyspark-stubs==2.4.0
 s3fs==0.4.2
 Werkzeug==1.0.1
